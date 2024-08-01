@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Undangan pernikahan Mustofa dengan Puji Lestari, 20 Agustus 2024" />
+  <meta property="og:image" content="" />
+
+  <title>Undangan Pernikahan ~ Mustofa & Puji</title>
+  <link rel="preload" as="image" href="awal.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+  crossorigin=""/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+  crossorigin=""></script>
+
+  <link rel="preload" as="image" href="gallery/1.jpg">
+  <link rel="preload" as="image" href="gallery/2.jpg">
+  <link rel="preload" as="image" href="gallery/3.jpg">
+  <link rel="preload" as="image" href="gallery/4.jpg">
+  <link rel="preload" as="image" href="gallery/5.jpg">
+  <link rel="preload" as="image" href="gallery/6.jpg">
+  <link rel="preload" as="image" href="gallery/7.jpg">
+  <link rel="preload" as="image" href="gallery/8.jpg">
+  <link rel="preload" as="image" href="gallery/9.jpg">
+  <link rel="preload" as="image" href="gallery/10.jpg">
+</head>
+<body>
+
+  <section id="cover">
+    <p>The Wedding of</p>
+    <div class="c-poster">
+      <h2>Mustofa</h2>
+      <h2>&amp;</h2>
+      <h2>Puji</h2>
+    </div>
+    <p>19 - 20 Agustus 2024</p>
+
+    <div id="counter">
+      <div>
+        <h3 class="count">
+          0
+        </h3>
+        <p>Hari</p>
+      </div>
+      <div>
+        <h3 class="count">
+          0
+        </h3>
+        <p>Jam</p>
+      </div>
+      <div>
+        <h3 class="count">
+          0
+        </h3>
+        <p>Menit</p>
+      </div>
+      <div>
+        <h3 class="count">
+          0
+        </h3>
+        <p>detik</p>
+      </div>
+    </div>
+
+    <div id="tamu">
+      <p>Tamu Undangan</p>
+    </div>
+    <button id="bukaUndangan" onclick="window.location.reload()">
+      <span>
+        Buka Undangan
+      </span>
+    </button>
+  </section>
+
+
+
+  <div id="control">
+    <button id="play" title="play/pause music">
+      <img src="assets/music.svg" alt="play/pause button for music" />
+    </button>
+    
+    <button class="hide" onclick="jump('awal')" title="home nav button">
+      <img src="assets/home.png" alt="home button icon" />
+    </button>
+    
+    <button class="hide" onclick="jump('couple')" title="couple nav button">
+      <img src="assets/wedding-rings.svg" alt="couple button icon" />
+    </button>
+    
+    <button class="hide" onclick="jump('acara')" title="event nav button">
+      <img src="assets/map.svg" alt="map button icon" />
+    </button>
+    
+    <button class="hide" onclick="jump('galeri')" title="gallery nav button">
+      <img src="assets/gallery.svg" alt="gallery button icon" />
+    </button>
+    
+    <button class="hide" onclick="jump('gift')" title="gift nav button">
+      <img src="assets/gift.svg" alt="gift button icon" />
+    </button>
+    
+    <button class="hide" onclick="jump('g-btn')" title="message nav button">
+      <img src="assets/chat.svg" alt="chat button icon" />
+    </button>
+    
+    <button id="scroll" title="auto scroll down button">
+      <img src="assets/scroll.svg" alt="auto scroll button" />
+    </button>
+    
+    <button id="expand" title="expansion button">
+      <img src="assets/expand.svg" alt="expansion button icon" />
+    </button>
+  </div>
+
+  <section id="awal">
+    <img draggable="true" src="assets/image-from-rawpixel.png" alt="frame bunga" />
+    <div class="awalText">
+      <p>The Wedding of</p>
+      <h2>Mustofa</h2>
+      <h2>&amp;</h2>
+      <h2>Puji Lestari</h2>
+      <p>19 - 20 Agustus 2024</p>
+    </div>
+  </section>
+
+  <section id="couple">
+
+    <div class="pra">
+      <p class="salam">Assalamu 'alaikum Warrahmatullahi Wabarakatuh</p>
+      <p data-aos="fade-up">
+        Dengan memohon rahmat dan ridho Allah SWT, <br>
+        Mohon do'a restu Bapak/Ibu/Saudara/i dalam rangka melangsungkan pernikahan putra-putri kami:
+      </p>
+    </div>
+
+    <div class="c-couple" data-aos="zoom-in-down">
+      <div class="foto-couple">
+        <img src="gallery/4.jpg" alt="foto kedua mempelai" />
+        
+      </div>
+    </div>
+
+    <div class="i-couple">
+      <div class="couple-part" data-aos="fade-up">
+        <h2 data-aos="fade-up" data-aos-delay="100">Mustofa</h2>
+        <p data-aos="fade-down" data-aos-delay="100">Putra dari Bapak Cahyono <i>(Alm)</i> dan Ibu Siti Munarti</p>
+        <p data-aos="zoom-in">
+          Dusun Ponolawen RT 16/ RW 06, Kecamatan Kesesi, Kabupaten Pekalongan, Jawa Tengah
+        </p>
+      </div>
+      <h2 class="amp" data-aos="zoom-in">&</h2>
+      <div class="couple-part" data-aos="fade-up">
+        <h2 data-aos="fade-up" data-aos-delay="100">Puji Lestari</h2>
+        <p data-aos="fade-down" data-aos-delay="100">Putri dari Bapak Sobirin <i>(Alm)</i> dan Ibu Darsiwen</p>
+        <p data-aos="zoom-in">
+          Dukuh Kentung RT 01/ RW 10, Desa Tegalontar, Kecamatan Sragi, Kabupaten Pekalongan, Jawa Tengah 
+        </p>
+      </div>
+      <div class="flower"></div>
+    </div>
+
+
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+
+  </section>
+
+  <section id="acara">
+    <h2>Events</h2>
+
+    <div class="akad">
+      <div class="isi">
+        <h3>Akad Nikah</h3>
+        <hr class="line">
+        <div class="tanggal">
+          <div class="jam">
+            <p>Selasa</p>
+            <p>07.00</p>
+          </div>
+          <div class="hari">
+            <p>20</p>
+          </div>
+          <div class="bulan">
+            <p>Agustus</p>
+            <p>2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="akad">
+      <div class="isi">
+        <h3>Resepsi</h3>
+        <hr class="line">
+        <div class="tanggal">
+          <div class="jam">
+            <p>Selasa</p>
+            <p>09.00</p>
+          </div>
+          <div class="hari">
+            <p>20</p>
+          </div>
+          <div class="bulan">
+            <p>Agustus</p>
+            <p>2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="akad">
+      <div class="isi">
+        <h3>Alamat</h3>
+        <hr class="line">
+
+        <div class="alamat">
+          <p>
+            Dukuh Kentung RT 01/ RW 10, Desa Tegalontar, Kecamatan Sragi, Kabupaten Pekalongan, Jawa Tengah 
+          </p>
+          <p style="margin: 2% auto;"></p>
+          <a style="color: #fff; font-weight: bold; background: transparent; padding: 2%;" href="https://maps.app.goo.gl/UdYbfAe9pTxAr2Qb8">Klik untuk buka GMaps</a>
+        </div>
+        <div id="map">
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="galeri">
+    <h2>Gallery</h2>
+
+    <div id="preview">
+
+    </div>
+
+    <div class="foto">
+      <img class="fl active" src="gallery/1.jpg" alt="Album foto" />
+      <img class="fl" src="gallery/2.jpg" alt="Album foto" />
+      <img class="fl" src="gallery/3.jpg" alt="Album foto" />
+      <img class="fl" src="gallery/4.jpg" alt="Album foto" />
+      <img class="fl" src="gallery/5.jpg" alt="Album foto" />
+      <img class="fl" src="gallery/6.jpg" alt="Album foto" />
+      <img class="fl" src="gallery/7.jpg" alt="Album foto" />
+      <img class="fl" src="gallery/8.jpg" alt="Album foto" />
+      <img class="fl" src="gallery/9.jpg" alt="Album foto" />
+      <img class="fl" src="gallery/10.jpg" alt="Album foto" />
+ 
+      </div>
+    </section>
+    
+    <section id="gift">
+
+      <h2>Gift</h2>
+      
+      <p>
+        Tanpa mengurangi rasa hormat, untuk melengkapi kebahagiaan pengantin, Anda dapat memberikan tanda kasih melalui nomor rekening / dompet digital berikut ini :
+      </p>
+      
+      <div class="rekening" data-aos="slide-right">
+        <img src="assets/bri.png" alt="logo bank dari nomor rekening" />
+        <div class="info">
+          <p>369401043151533</p>
+          <p>Mustofa</p>
+          <button onclick="copy(this, '369401043151533')">Salin</button>
+        </div>
+      </div>
+
+      <div class="rekening" data-aos="slide-right">
+        <img src="assets/mandiri.png" alt="logo bank dari nomor rekening" />
+        <div class="info">
+          <p>1360014660754</p>
+          <p>Puji Lestari</p>
+          <button onclick="copy(this, '1360014660754')">Salin</button>
+        </div>
+      </div>
+      
+      
+      <button id="g-btn" onclick="tulisPesan()">
+        Kirim Pesan untuk Mempelai
+      </button>
+      
+      
+      <div class="c-pesan">
+
+
+
+      </div>
+      
+      <img class="gf" src="assets/frameAwal.png" alt="background bunga" />
+    </section>
+    
+    
+    <section id="penutup">
+      <p>
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do’a restu kepada kedua mempelai.
+      </p>
+      <p data-aos="zoom-in-down">
+        <i>
+          "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir." (QS. Ar-Rum: 21)
+        </i>
+      </p>
+      <p class="salam">
+        Wassalamu'alaikum Warahmatullahi Wabarakatuh
+      </p>
+      <p class="my-2">Turut berbahagia, <br>
+        Segenap keluarga besar
+      </p>
+
+      <h2>Mustofa</h2>
+      <h2>&amp;</h2>
+      <h2>Puji Lestari</h2>
+
+     
+    <img class="dekor2" src="assets/frame2.png" alt="dekorasi" />
+    
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+    <span class="flowers"></span>
+
+
+  </section>
+
+  <footer>
+    <p>Undangan dibuat oleh : <a href="https://wa.me/6289650292753">Afzal Azkhari</a>, 
+      images by <a href="https://www.rawpixel.com/">rawpixel.com</a></p>
+    </footer>
+    
+    <script src="mine.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" type="text/javascript">
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+  </html>

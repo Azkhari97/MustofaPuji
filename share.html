@@ -19,25 +19,34 @@
 
 <div class="bg-primary p-3 rounded" content="Pesan undangan saat dikirim">
             
-<textarea id="pesan" readonly class="form-control mb-3" rows="7" placeholder="Masukan pesan undangan">
-Assalamu 'alaikum Wr. Wb.
+<textarea id="pesan" readonly class="form-control mb-3" rows="7" placeholder="Masukan pesan undangan">بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْم
+
+Assalamu'alaikum Warahmatullahi Wabarakaatuh
 Yth. *Tamu Undangan*
-                
-Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara pernikahan kami 
-*Mustofa dan Puji Lestari*
-yang Insya Allah akan dilaksanakan pada
-Hari/Tanggal : Selasa, 20 Agustus 2024
-Pukul : 07.00 - Selesai
-Alamat : Dukuh Kentung RT 01/ RW 10, Desa Tegalontar, Kecamatan Sragi, Kabupaten Pekalongan, Jawa Tengah
-                
-yang mana dapat Bapak/Ibu/Saudara/i lihat melalui link dibawah ini
-https://mustofapuji.netlify.app/?to=Tamu-Undangan
-                
+
+Maha Suci Allah SWT dengan segala Kebesaran-Nya yang telah menciptakan makhluk-Nya berpasang-pasangan, melalui pesan ini kami ingin menyampaikan kabar bahagia atas pernikahan kami :
+
+*Mustofa* 
+dan
+*Puji Lestari*
+
+yang InsyaAllah akan diselenggarakan pada :
+
+Hari, tanggal : Selasa, 20 Agustus 2024
+Akad & Resepsi  : Pukul 07.00 WIB
+Alamat : Dukuh Kentung RT 01/ RW 10, Desa Tegalontar, Kecamatan Sragi, Kabupaten Pekalongan, Jawa Tengah
+
+Kami berharap kehadiran Bapak/Ibu/Saudara/i serta memohon do’a restu, dan semoga keridhoan atas do’a tersebut menjadi keberkahan untuk pernikahan kami dan terbangun keluarga yang sakinnah mawadah warrahmah. Amin ya Robbal 'alamin.
+
 Atas kehadiran dan do'a dari Bapak/Ibu/Saudara/i, kami mengucapkan terima kasih.
+
+Wassalamu'alaikum Warahmatullahi Wabarakaatuh
                 
 Kami yang berbahagia
-*Keluarga besar Mustofa dan Puji lestari*
-            </textarea>
+*Keluarga besar Mustofa* dan *Puji lestari*
+
+Undangan lengkap dapat di askes melalui tautan : 
+https://mustofapuji.netlify.app/?to=Tamu-Undangan</textarea>
 
             <input type="text" id="penerima" class="form-control mb-3" placeholder="Masukan nama tamu" />
 
@@ -64,7 +73,7 @@ Kami yang berbahagia
             if(penerima.value !== "" ){
                 console.log(true)
                 text = text.replace("Tamu Undangan", penerima.value);
-                penerima.value = penerima.value.replace(" ", "-");
+                penerima.value = penerima.value.replace(/\s+/g, "-");
                 text = text.replace("Tamu-Undangan", penerima.value);
                 console.log(text)
                 text = encodeURI(text);

@@ -465,6 +465,7 @@ fetch(link, getParam).then((res)=>res.json()).then((data)=>{
   console.dir(data);
 }).catch((e)=>{console.dir(e)})*/
 let control = document.getElementById('control');
+let expand = document.getElementById('expand');
 let hide = document.getElementsByClassName('hide');
 let show = false;
 
@@ -482,7 +483,7 @@ function showMenu(arr){
 
 hideMenu(hide)
 
-control.onclick = (e)=>{
+expand.onclick = (e)=>{
   if(show == false){
   showMenu(hide);
   show = true;

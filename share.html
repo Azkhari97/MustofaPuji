@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagikan Undangan</title>
+    <meta name="description" content="Halaman untuk membagikan undangan" />
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <section class="container text-center pt-5">
+
+        <h1>Halaman untuk membagikan undangan</h1>
+
+<div class="bg-primary p-3 rounded" content="Pesan undangan saat dikirim">
+            
+<textarea id="pesan" readonly class="form-control mb-3" rows="7" placeholder="Masukan pesan undangan">
+Assalamu 'alaikum Wr. Wb.
+Yth. *Tamu Undangan*
+                
+Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara pernikahan kami 
+*Mustofa & Puji Lestari*
+yang Insya Allah akan dilaksanakan pada
+Hari/Tanggal : Selasa, 20 Agustus 2024
+Pukul : 07.00 - Selesai
+Alamat : Dukuh Kentung RT 01/ RW 10, Desa Tegalontar, Kecamatan Sragi, Kabupaten Pekalongan, Jawa Tengah
+                
+yang mana dapat Bapak/Ibu/Saudara/i lihat melalui link dibawah ini
+https://mustofapuji.netlify.app/?to=Tamu-Undangan
+                
+Atas kehadiran dan do'a dari Bapak/Ibu/Saudara/i, kami mengucapkan terima kasih.
+                
+Kami yang berbahagia
+*Keluarga besar Mustofa & Puji lestari*
+            </textarea>
+
+            <input type="text" id="penerima" class="form-control mb-3" placeholder="Masukan nama tamu" />
+
+            <button class="btn btn-md btn-primary border-white px-5" id="kirim">Kirim</button>
+        </div>
+
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        let pesan = document.getElementById('pesan');
+        let penerima = document.getElementById('penerima');
+        let kirim = document.getElementById('kirim');
+
+        kirim.addEventListener('click',(e)=>{
+
+            let text = pesan.value;
+
+            if(penerima.value !== "" ){
+                console.log(true)
+                text = text.replace("Tamu Undangan", penerima.value);
+                penerima.value = penerima.value.replace(" ", "-");
+                text = text.replace("Tamu-Undangan", penerima.value);
+                console.log(text)
+                text = encodeURI(text);
+
+                let a = document.createElement('a')
+                a.setAttribute('target','_blank')
+                a.href = "https://wa.me/?text=" + text;
+
+                a.click();
+            }
+            else {
+                console.log(false)
+                alert("Mohon masukan nama penerima!")
+                penerima.focus();
+            }
+
+        })
+        
+
+    </script>
+</body>
+</html>

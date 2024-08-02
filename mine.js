@@ -29,6 +29,9 @@ function tamu(){
   
   if(tujuan.length > 1){
   tujuan = tujuan[tujuan.length-1].split("=")[1];
+  if(tujuan.split('&').length > 0){
+    tujuan = tujuan.split('&')[0]
+  }
   let tamu = document.getElementById('tamu');
   tamu.innerHTML = "";
   let teksP = document.createElement('p');
@@ -499,3 +502,20 @@ function jump(target){
   a.setAttribute('href','#'+target)
   a.click();
 }
+
+let canHide = document.getElementsByClassName('canHide');
+
+function hideNow(arr){
+  for(let rekening of arr){
+    rekening.style.display = "none"
+  }
+}
+
+let thisUrl = document.location.href;
+
+if(thisUrl.split('&').length > 0){
+  hideNow(canHide);
+}
+else {
+  //do nothing
+       }

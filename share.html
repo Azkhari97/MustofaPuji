@@ -33,7 +33,7 @@ dan
 yang InsyaAllah akan diselenggarakan pada :
 
 Hari, tanggal : Selasa, 20 Agustus 2024
-Waktu  : Pukul 07.00 WIB
+Waktu : Pukul 07.00 WIB
 Alamat : Dukuh Kentung RT 01/ RW 10, Desa Tegalontar, Kecamatan Sragi, Kabupaten Pekalongan, Jawa Tengah
 
 Kami berharap kehadiran Bapak/Ibu/Saudara/i serta memohon do’a restu, dan semoga keridhoan atas do’a tersebut menjadi keberkahan untuk pernikahan kami dan terbangun keluarga yang sakinnah mawadah warrahmah. Amin ya Robbal 'alamin.
@@ -49,8 +49,15 @@ Undangan lengkap dapat di askes melalui tautan :
 https://mustofapuji.netlify.app/?to=Tamu-Undangan</textarea>
 
             <input type="text" id="penerima" class="form-control mb-3" placeholder="Masukan nama tamu" />
+            
+            <label class="text-center" style="font-size: 0.8rem;" for="hideRekening">Apakah ingin menyertakan rekening pada undangan ?</label>
+            <select class="form-control mb-3" id="hideRekening">
+              <option value="choose">--Pilih--</option>
+              <option value="true">Sembunyikan Rekening</option>
+              <option value="false">Sertakan Rekening</option>
+            </select>
 
-            <button class="btn btn-md btn-outline-success text-white border-white px-5" id="kirim">Kirim</button>
+            <button class="btn btn-md btn-outline-success border-white px-5 text-white" id="kirim">Kirim</button>
         </div>
 
     </section>
@@ -65,24 +72,34 @@ https://mustofapuji.netlify.app/?to=Tamu-Undangan</textarea>
         let pesan = document.getElementById('pesan');
         let penerima = document.getElementById('penerima');
         let kirim = document.getElementById('kirim');
+        let hideRekening = document.getElementById('hideRekening');
 
         kirim.addEventListener('click',(e)=>{
 
             let text = pesan.value;
 
-            if(penerima.value !== "" ){
+            if(penerima.value !== ""){
                 console.log(true)
                 text = text.replace("Tamu Undangan", penerima.value);
+                
+                if(hideRekening.value == "false"){
                 penerima.value = penerima.value.replace(/\s+/g, "-");
                 text = text.replace("Tamu-Undangan", penerima.value);
-                console.log(text)
-                text = encodeURI(text);
-
-                let a = document.createElement('a')
-                a.setAttribute('target','_blank')
-                a.href = "https://wa.me/?text=" + text;
-
-                a.click();
+                kirimkan(text)
+                }
+                
+                else if(hideRekening.value == "true"){
+                penerima.value = penerima.value.replace(/\s+/g, "-");
+                text = text.replace("Tamu-Undangan", penerima.value+"&hide");
+                  kirimkan(text)
+                }
+                else{
+                  alert("Mohon pilih apakah akan menampilkan rekening atau tidak");
+                  
+                  hideRekening.focus()
+                }
+                
+                
             }
             else {
                 console.log(false)
@@ -92,7 +109,17 @@ https://mustofapuji.netlify.app/?to=Tamu-Undangan</textarea>
 
         })
         
+function kirimkan(text){
+  
+                console.log(text)
+                text = encodeURI(text);
 
+                let a = document.createElement('a')
+                a.setAttribute('target','_blank')
+                a.href = "https://wa.me/?text=" + text;
+
+                a.click();
+}
     </script>
 </body>
-</html>
+</html

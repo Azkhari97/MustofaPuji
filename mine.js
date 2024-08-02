@@ -512,6 +512,7 @@ function hideNow(arr){
 }
 
 let thisUrl = document.location.href;
+alert(thisUrl.split('_').length);
 
 if(thisUrl.split('_').length > 1){
   hideNow(canHide);

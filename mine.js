@@ -29,8 +29,8 @@ function tamu(){
   
   if(tujuan.length > 1){
   tujuan = tujuan[tujuan.length-1].split("=")[1];
-  if(tujuan.split('&').length > 0){
-    tujuan = tujuan.split('&')[0]
+  if(tujuan.split('_').length > 0){
+    tujuan = tujuan.split('_')[0]
   }
   let tamu = document.getElementById('tamu');
   tamu.innerHTML = "";
@@ -518,4 +518,4 @@ if(thisUrl.split('&').length > 0){
 }
 else {
   //do nothing
-       }
+}

@@ -45,7 +45,7 @@ Wassalamu'alaikum Warahmatullahi Wabarakaatuh
 Kami yang berbahagia
 *Keluarga besar Mustofa* dan *Puji lestari*
 
-Undangan lengkap dapat di askes melalui tautan : 
+Undangan lengkap dapat di akses melalui tautan : 
 https://mustofapuji.netlify.app/?to=Tamu-Undangan</textarea>
 
             <input type="text" id="penerima" class="form-control mb-3" placeholder="Masukan nama tamu" />
@@ -90,7 +90,7 @@ https://mustofapuji.netlify.app/?to=Tamu-Undangan</textarea>
                 
                 else if(hideRekening.value == "true"){
                 penerima.value = penerima.value.replace(/\s+/g, "-");
-                text = text.replace("Tamu-Undangan", penerima.value+"&hide");
+                text = text.replace("Tamu-Undangan", penerima.value+"_hide");
                   kirimkan(text)
                 }
                 else{
@@ -122,4 +122,4 @@ function kirimkan(text){
 }
     </script>
 </body>
-</html
+</html>
